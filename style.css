@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
@@ -126,16 +125,16 @@ a {
 /* ===== IMAGE ===== */
 
 .subteam-image {
-  width: 270px;
-  height: 202px;
+  width: 310px;
+  height: 232px;
 
   margin: 20px auto 28px;
 
   overflow: hidden;
 
-  background: white;
+  background: transparent;
 
-  border: 1px solid var(--line);
+  border: none;
 
   position: relative;
 }
@@ -261,4 +260,3 @@ a {
     font-size: 24px;
   }
 }
-
