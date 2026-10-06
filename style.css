@@ -1,6 +1,14 @@
-/* =========================================================
-   GENERAL
-   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #101014;
+  --muted: #6d6d76;
+  --paper: #f7f7f5;
+  --blue: #2563eb;
+  --purple: #6635b8;
+  --line: #dededb;
+}
 
 * {
   box-sizing: border-box;
@@ -12,10 +20,9 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #151515;
-  font-family: "DM Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
 }
 
 a {
@@ -24,291 +31,234 @@ a {
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* ===== PAGE ===== */
 
-.site-header {
-  width: 100%;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.header-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 28px 5vw;
-}
-
-.brand-title {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 21px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-.brand-subtitle {
-  margin-top: 5px;
-  color: #777;
-  font-size: 13px;
-  letter-spacing: 0.01em;
+.relay-page {
+  min-height: 100vh;
 }
 
 
-/* =========================================================
-   INTRO
-   ========================================================= */
+/* ===== HEADER ===== */
 
-.intro {
-  padding: 100px 5vw 70px;
+.relay-header {
+  padding: 9vh 7vw 7vh;
+  border-bottom: 1px solid var(--line);
 }
 
-.intro-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.eyebrow {
-  margin: 0 0 22px;
+.relay-header .eyebrow {
+  margin: 0 0 16px;
 
   font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: .14em;
   text-transform: uppercase;
+  font-weight: 700;
 
-  color: #2463a5;
+  color: var(--blue);
 }
 
-h1 {
+.relay-header h1 {
   margin: 0;
 
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(52px, 7vw, 100px);
-  line-height: 0.98;
-  font-weight: 500;
-  letter-spacing: -0.055em;
-}
+  font-family: "Space Grotesk", Arial, sans-serif;
 
-h1 span {
-  color: #2463a5;
-}
-
-.intro-text {
-  max-width: 650px;
-  margin: 34px 0 0;
-
-  font-size: 18px;
-  line-height: 1.55;
-  color: #555;
+  font-size: 58px;
+  line-height: .98;
+  letter-spacing: -.055em;
 }
 
 
-/* =========================================================
-   SUBTEAMS
-   ========================================================= */
+/* ===== SUBTEAMS ===== */
 
 .subteams {
-  max-width: 1400px;
+  max-width: 1050px;
+
   margin: 0 auto;
 
-  padding: 30px 5vw 120px;
+  padding: 85px 6vw 120px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5vw;
+
+  gap: 90px;
 }
 
 
-/* =========================================================
-   SUBTEAM
-   ========================================================= */
+/* ===== SUBTEAM ===== */
 
 .subteam {
-  display: block;
+  position: relative;
 
-  /* No card */
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding-top: 18px;
+
+  transition: transform .3s ease;
+}
+
+
+/* small top line */
+
+.subteam::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 42px;
+  height: 1px;
+
+  background: var(--line);
+
+  transform: translateX(-50%);
 
   transition:
-    transform 0.25s ease;
+    width .3s ease,
+    background .3s ease;
 }
+
+
+/* ===== IMAGE ===== */
+
+.subteam-image {
+  width: 270px;
+  height: 202px;
+
+  margin: 20px auto 28px;
+
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+  position: relative;
+}
+
+.subteam-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: transform .45s ease;
+}
+
+
+/* ===== LABEL ===== */
+
+.subteam-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subteam-label span {
+  font-family: "Space Grotesk", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: .1em;
+
+  color: var(--blue);
+
+  margin-bottom: 10px;
+}
+
+.subteam-label h2 {
+  margin: 0;
+
+  font-family: "Space Grotesk", Arial, sans-serif;
+
+  font-size: 27px;
+  line-height: 1.1;
+
+  letter-spacing: -.035em;
+
+  font-weight: 600;
+
+  transition: color .25s ease;
+}
+
+
+/* ===== HOVER ===== */
 
 .subteam:hover {
   transform: translateY(-5px);
 }
 
-
-/* =========================================================
-   IMAGE
-   ========================================================= */
-
-.subteam-image {
-  width: 100%;
-
-  /*
-   * Larger image area:
-   * the image now fills the width of each column
-   * without a white frame around it.
-   */
-  aspect-ratio: 1.18 / 1;
-
-  overflow: hidden;
-
-  background: transparent;
-  border: none;
-  box-shadow: none;
-
-  margin: 0;
-  padding: 0;
-}
-
-.subteam-image img {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  border: none;
-  box-shadow: none;
-
-  transition: transform 0.5s ease;
+.subteam:hover::before {
+  width: 75px;
+  background: var(--blue);
 }
 
 .subteam:hover .subteam-image img {
-  transform: scale(1.025);
+  transform: scale(1.035);
+}
+
+.subteam:hover .subteam-label h2 {
+  color: var(--blue);
 }
 
 
-/* =========================================================
-   SUBTEAM TEXT
-   ========================================================= */
+/* ===== RESPONSIVE ===== */
 
-.subteam-content {
-  padding-top: 28px;
-}
+@media (max-width: 850px) {
 
-.subteam-label {
-  margin: 0 0 10px;
-
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-
-  color: #2463a5;
-}
-
-.subteam h2 {
-  margin: 0;
-
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(30px, 3vw, 46px);
-  line-height: 1.05;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-}
-
-.subteam p:not(.subteam-label) {
-  max-width: 520px;
-
-  margin: 18px 0 0;
-
-  font-size: 16px;
-  line-height: 1.55;
-
-  color: #606060;
-}
-
-.explore {
-  display: inline-block;
-
-  margin-top: 25px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  color: #151515;
-
-  transition: color 0.2s ease;
-}
-
-.subteam:hover .explore {
-  color: #2463a5;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-  border-top: 1px solid #e8e8e8;
-}
-
-.footer-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-
-  padding: 25px 5vw 30px;
-
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-
-  font-size: 12px;
-  color: #888;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 800px) {
-
-  .header-inner {
-    padding: 22px 6vw;
+  .relay-header {
+    padding: 70px 6vw 55px;
   }
 
-  .intro {
-    padding: 70px 6vw 50px;
-  }
-
-  h1 {
-    font-size: clamp(48px, 14vw, 72px);
-  }
-
-  .intro-text {
-    font-size: 16px;
+  .relay-header h1 {
+    font-size: 50px;
   }
 
   .subteams {
     grid-template-columns: 1fr;
 
-    padding: 20px 6vw 80px;
+    gap: 80px;
 
-    gap: 70px;
+    padding: 70px 6vw 90px;
   }
 
   .subteam-image {
-    aspect-ratio: 1.25 / 1;
-  }
-
-  .subteam-content {
-    padding-top: 22px;
-  }
-
-  .subteam h2 {
-    font-size: 34px;
-  }
-
-  .footer-inner {
-    padding: 22px 6vw 25px;
-
-    flex-direction: column;
-    gap: 8px;
+    width: 300px;
+    height: 225px;
   }
 }
+
+
+@media (max-width: 520px) {
+
+  .relay-header {
+    padding: 60px 6vw 45px;
+  }
+
+  .relay-header h1 {
+    font-size: 44px;
+  }
+
+  .subteams {
+    padding: 55px 6vw 70px;
+
+    gap: 65px;
+  }
+
+  .subteam-image {
+    width: 240px;
+    height: 180px;
+  }
+
+  .subteam-label h2 {
+    font-size: 24px;
+  }
+}
+
