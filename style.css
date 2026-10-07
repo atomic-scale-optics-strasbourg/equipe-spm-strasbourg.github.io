@@ -97,7 +97,8 @@ a {
 
   margin: 0 auto;
 
-  padding: 38px 0 28px;
+  /* More space below the header */
+  padding: 68px 0 50px;
 
   text-align: center;
 }
@@ -144,11 +145,13 @@ a {
 
   margin: 0 auto;
 
-  padding: 40px 0 85px;
+  /* More space between researchers and images */
+  padding: 45px 0 85px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  /* More separation between the two teams */
   gap: 90px;
 }
 
@@ -231,11 +234,11 @@ a {
 @media (max-width: 900px) {
 
   .relay-header {
-    padding: 50px 6vw 38px;
+    padding: 55px 6vw 45px;
   }
 
   .relay-header h1 {
-    font-size: 42.5px;
+    font-size: 43px;
   }
 
   .team-logo {
@@ -244,16 +247,17 @@ a {
   }
 
   .permanent-staff {
-    padding-top: 32px;
+    padding-top: 55px;
+    padding-bottom: 40px;
   }
 
   .subteams {
-    gap: 65px;
-    padding-top: 35px;
+    gap: 60px;
+    padding-top: 40px;
   }
 
   .subteam-image {
-    height: 261px;
+    height: 285px;
   }
 
   .subteam h2 {
@@ -268,13 +272,22 @@ a {
     gap: 25px;
   }
 
+  .relay-header {
+    padding: 50px 6vw 40px;
+  }
+
   .relay-header h1 {
-    font-size: 36.5px;
+    font-size: 38px;
   }
 
   .team-logo {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
+  }
+
+  .permanent-staff {
+    padding-top: 50px;
+    padding-bottom: 35px;
   }
 
   .staff-names {
@@ -292,7 +305,7 @@ a {
   }
 
   .subteam-image {
-    height: 270px;
+    height: 300px;
   }
 }
 
@@ -300,16 +313,15 @@ a {
 @media (max-width: 480px) {
 
   .relay-header {
-    padding: 42px 6vw 32px;
+    padding: 45px 6vw 35px;
   }
 
   .relay-header h1 {
-    font-size: 31.5px;
+    font-size: 34px;
   }
 
   .relay-header .eyebrow {
     font-size: 10px;
-    margin-bottom: 10px;
   }
 
   .team-logo {
@@ -318,8 +330,8 @@ a {
   }
 
   .permanent-staff {
-    padding-top: 28px;
-    padding-bottom: 18px;
+    padding-top: 45px;
+    padding-bottom: 30px;
   }
 
   .staff-names {
@@ -331,8 +343,12 @@ a {
     margin: 0 5px;
   }
 
+  .subteams {
+    padding-top: 30px;
+  }
+
   .subteam-image {
-    height: 225px;
+    height: 250px;
     margin-bottom: 23px;
   }
 
