@@ -39,7 +39,7 @@ a {
 /* ===== HEADER ===== */
 
 .relay-header {
-  padding: 8vh 7vw 7vh;
+  padding: 8vh 7vw 6vh;
   border-bottom: 1px solid var(--line);
 }
 
@@ -81,8 +81,8 @@ a {
 /* ===== LOGO ===== */
 
 .team-logo {
-  width: 135px;
-  height: 135px;
+  width: 125px;
+  height: 125px;
 
   object-fit: contain;
 
@@ -90,19 +90,66 @@ a {
 }
 
 
-/* ===== SUBTEAMS ===== */
+/* ===== PERMANENT STAFF ===== */
 
-.subteams {
-  width: min(1400px, 90vw);
+.permanent-staff {
+  width: min(1100px, 88vw);
 
   margin: 0 auto;
 
-  padding: 85px 0 90px;
+  padding: 38px 0 28px;
+
+  text-align: center;
+}
+
+.staff-title {
+  margin: 0 0 13px;
+
+  font-family: "Space Grotesk", Arial, sans-serif;
+
+  font-size: 11px;
+  letter-spacing: .17em;
+
+  text-transform: uppercase;
+
+  font-weight: 600;
+
+  color: var(--muted);
+}
+
+.staff-names {
+  margin: 0;
+
+  font-family: "Space Grotesk", Arial, sans-serif;
+
+  font-size: 19px;
+  line-height: 1.5;
+
+  letter-spacing: -.01em;
+
+  font-weight: 500;
+}
+
+.staff-names span {
+  color: var(--blue);
+
+  margin: 0 9px;
+}
+
+
+/* ===== SUBTEAMS ===== */
+
+.subteams {
+  width: min(1250px, 88vw);
+
+  margin: 0 auto;
+
+  padding: 40px 0 85px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  gap: 70px;
+  gap: 65px;
 }
 
 
@@ -123,7 +170,7 @@ a {
 
 .subteam-image {
   width: 100%;
-  height: 390px;
+  height: 350px;
 
   display: flex;
   align-items: center;
@@ -131,7 +178,7 @@ a {
 
   overflow: hidden;
 
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 }
 
 .subteam-image img {
@@ -153,7 +200,7 @@ a {
 
   font-family: "Space Grotesk", Arial, sans-serif;
 
-  font-size: 31px;
+  font-size: 30px;
   line-height: 1.1;
 
   letter-spacing: -.04em;
@@ -167,7 +214,7 @@ a {
 /* ===== HOVER ===== */
 
 .subteam:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
 }
 
 .subteam:hover .subteam-image img {
@@ -179,61 +226,12 @@ a {
 }
 
 
-/* ===== PERMANENT STAFF ===== */
-
-.permanent-staff {
-  width: min(1000px, 85vw);
-
-  margin: 0 auto;
-
-  padding: 45px 0 85px;
-
-  border-top: 1px solid var(--line);
-
-  text-align: center;
-}
-
-.staff-title {
-  margin: 0 0 18px;
-
-  font-family: "Space Grotesk", Arial, sans-serif;
-
-  font-size: 12px;
-  letter-spacing: .16em;
-
-  text-transform: uppercase;
-
-  font-weight: 600;
-
-  color: var(--muted);
-}
-
-.staff-names {
-  margin: 0;
-
-  font-family: "Space Grotesk", Arial, sans-serif;
-
-  font-size: 21px;
-  line-height: 1.6;
-
-  letter-spacing: -.015em;
-
-  font-weight: 500;
-}
-
-.staff-names span {
-  color: var(--blue);
-
-  margin: 0 10px;
-}
-
-
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
 
   .relay-header {
-    padding: 70px 6vw 60px;
+    padding: 70px 6vw 55px;
   }
 
   .relay-header h1 {
@@ -241,20 +239,21 @@ a {
   }
 
   .team-logo {
-    width: 105px;
-    height: 105px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .permanent-staff {
+    padding-top: 32px;
   }
 
   .subteams {
-    width: 90vw;
-
     gap: 45px;
-
-    padding: 70px 0 75px;
+    padding-top: 35px;
   }
 
   .subteam-image {
-    height: 300px;
+    height: 290px;
   }
 
   .subteam h2 {
@@ -278,33 +277,22 @@ a {
     height: 80px;
   }
 
+  .staff-names {
+    font-size: 17px;
+  }
+
   .subteams {
     grid-template-columns: 1fr;
 
     width: 88vw;
 
-    gap: 70px;
+    gap: 65px;
 
-    padding: 60px 0 70px;
+    padding-top: 35px;
   }
 
   .subteam-image {
-    height: 320px;
-  }
-
-  .subteam h2 {
-    font-size: 27px;
-  }
-
-  .permanent-staff {
-    width: 88vw;
-
-    padding-top: 40px;
-    padding-bottom: 65px;
-  }
-
-  .staff-names {
-    font-size: 18px;
+    height: 300px;
   }
 }
 
@@ -328,22 +316,27 @@ a {
     height: 65px;
   }
 
-  .subteam-image {
-    height: 260px;
-
-    margin-bottom: 25px;
-  }
-
-  .subteam h2 {
-    font-size: 24px;
+  .permanent-staff {
+    padding-top: 28px;
+    padding-bottom: 18px;
   }
 
   .staff-names {
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.8;
   }
 
   .staff-names span {
     margin: 0 5px;
+  }
+
+  .subteam-image {
+    height: 250px;
+    margin-bottom: 23px;
+  }
+
+  .subteam h2 {
+    font-size: 24px;
   }
 }
 
